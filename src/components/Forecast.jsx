@@ -1,12 +1,11 @@
 import React from "react";
-import { UilSearch } from '@iconscout/react-unicons';
 
-function Forecast() {
+function Forecast( {title} ) {
 
     return (
     <div className="forecast">
         <div className="forecast-title">
-            <p>Forecast day</p>
+            <p>{title}</p>
         </div>
         <hr />
         <div className="forecast-container">

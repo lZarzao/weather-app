@@ -3,13 +3,17 @@ import SearchBar from './components/search-bar';
 import Location from './components/location';
 import WeatherDetails from './components/weather-details';
 import Forecast from './components/Forecast';
-
-const api = {
-  key: "2abd254968449e3f2aca30a513bc1f53",
-  base: "https://api.openweathermap.org/data/3.0"
-}
+import getFullWeatherData from './services/weather.service';
 
 function App() {
+
+  const fetchWeather = async() => {
+    const data = await getFullWeatherData({q: 'asuncion'})
+    console.log(data)
+  }
+
+  fetchWeather()
+
   return (
     <div className="app">
       <main>
@@ -17,7 +21,7 @@ function App() {
         <SearchBar />
         <Location />
         <WeatherDetails />
-        <Forecast />
+        <Forecast title="Daily Forecast"/>
       </main>
     </div>
   );

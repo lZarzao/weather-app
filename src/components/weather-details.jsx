@@ -22,17 +22,17 @@ function WeatherDetails() {
                 </div>
                 <div className="info-flex">
                     <UilSun size={20} className="icon" />
-                    <p>Rise: <span>05:30</span></p>
+                    <p>Sunrise: <span>05:30</span></p>
                 </div>
                 <div className="info-flex">
                     <UilSunset size={20} className="icon" />
-                    <p>Set: <span>18:30</span></p>
+                    <p>Sunset: <span>18:30</span></p>
                 </div>
             </div>
             <div className="info-box">
                 <div className="info-flex">
                     <UilTemperature size={20} className="icon" />
-                    <p>Real fell: <span>20°</span></p>
+                    <p>Fells like: <span>20°</span></p>
                 </div>
                 <div className="info-flex">
                     <UilTear size={20} className="icon" />
