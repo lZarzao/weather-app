@@ -56,9 +56,9 @@ const getFullWeatherData = async (searchParams) => {
         return {...currentWeatherData, ...forecastWheaterData}
 }
 
-const iconUrl = (code) => `http://openweathermap.org/img/wn/${code}@2x.png`
+const iconUrl = (code) => `http://openweathermap.org/img/wn/${code}@4x.png`
 
-const localTime = (sec, zone, format = "cccc, dd LLLL yyyy' - Local time: 'hh:mm") => 
+const localTime = (sec, zone, format = "cccc, dd LLLL yyyy' - Local time: 'hh:mm a") => 
     DateTime.fromSeconds(sec).setZone(zone).toFormat(format)
 
 

@@ -13,7 +13,7 @@
 body {
   font-family: 'Helvetica', sans-serif;
   color: var(--main-text);
-  background-color: var(--main-cold);
+  background: linear-gradient(315deg, rgba(25,195,251,1) 0%, rgba(29,113,242,1) 25%, rgba(25,195,251,1) 75%, rgba(29,113,242,1) 100%);
 }
 
 .app {
@@ -26,7 +26,7 @@ main {
   max-width: 780px;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 25px;
+  padding: 25px 15px 10px;
 }
 
 .nav-bar {
@@ -154,11 +154,6 @@ main {
   font-style: italic;
 }
 
-.location-info .separator {
-  margin: 0 8px;
-  font-weight: 700;
-}
-
 .weather-details {
   display: flex;
   flex-direction: column;
@@ -180,7 +175,8 @@ main {
 }
 
 .temp img {
-  width: 50%;
+  width: 200px;
+  object-fit: cover;
 }
 
 .weather-details .info {
@@ -215,10 +211,6 @@ main {
   font-size: 16px;
 }
 
-.info-flex span {
-  font-weight: 700;
-}
-
 .info-flex .icon {
   margin-right: 8px;
 }
@@ -239,10 +231,15 @@ hr {
   margin: 16px 0;
 }
 
-.forecat-box {
+.forecast-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.forecast-box img {
+  max-width: 60px;
+  object-fit: cover;
 }

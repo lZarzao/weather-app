@@ -1,6 +1,7 @@
 import React from "react";
+import { iconUrl } from "../services/weather.service";
 
-function Forecast( {title} ) {
+function Forecast( {title, items} ) {
 
     return (
     <div className="forecast">
@@ -9,31 +10,13 @@ function Forecast( {title} ) {
         </div>
         <hr />
         <div className="forecast-container">
-            <div className="forecat-box">
-                <p>Monday</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Circle-icons-weather.svg" alt="weather img" />
-                <p>30°</p>
-            </div>
-            <div className="forecat-box">
-                <p>Monday</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Circle-icons-weather.svg" alt="weather img" />
-                <p>30°</p>
-            </div>
-            <div className="forecat-box">
-                <p>Monday</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Circle-icons-weather.svg" alt="weather img" />
-                <p>30°</p>
-            </div>
-            <div className="forecat-box">
-                <p>Monday</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Circle-icons-weather.svg" alt="weather img" />
-                <p>30°</p>
-            </div>
-            <div className="forecat-box">
-                <p>Monday</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Circle-icons-weather.svg" alt="weather img" />
-                <p>30°</p>
-            </div>
+            {items.map(item => (
+                <div className="forecast-box">
+                    <p>{item.title}</p>
+                    <img src={iconUrl(item.icon)} alt="weather img" />
+                    <p>{`${item.temp.toFixed()}°`}</p>
+                </div>
+            ))}
         </div>
     </div>
     )
