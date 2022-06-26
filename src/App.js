@@ -1,4 +1,5 @@
-import UilReact from '@iconscout/react-unicons/icons/uil-react'
+import UilReact from '@iconscout/react-unicons/icons/uil-react';
+import NavBar from './components/nav-bar';
 
 const api = {
   key: "2abd254968449e3f2aca30a513bc1f53",
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="app">
       <main>
+        <NavBar />
         <div className="search-box">
           <input type="text" className="search-bar" placeholder="Search..."/>
         </div>
