@@ -1,6 +1,8 @@
 import NavBar from './components/nav-bar';
 import SearchBar from './components/search-bar';
-import Location from './components/location'
+import Location from './components/location';
+import WeatherDetails from './components/weather-details';
+import Forecast from './components/Forecast';
 
 const api = {
   key: "2abd254968449e3f2aca30a513bc1f53",
@@ -14,14 +16,8 @@ function App() {
         <NavBar />
         <SearchBar />
         <Location />
-        <div className="weather-info">
-          <div className="temp">
-            <h1>26°C</h1>
-          </div>
-          <div className="weather">
-            cloudy
-          </div>
-        </div>
+        <WeatherDetails />
+        <Forecast />
       </main>
     </div>
   );

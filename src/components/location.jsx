@@ -24,7 +24,7 @@ function Location() {
             <p>Local time: 06:00</p>
         </div>
         <div className="location">
-            <UilLocationPoint size={24} className="location-icon" />
+            <UilLocationPoint size={32} className="location-icon" />
             <p>Asunción, PY</p>
         </div>
     </div>
