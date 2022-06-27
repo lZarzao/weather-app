@@ -13,12 +13,10 @@
 body {
   font-family: 'Helvetica', sans-serif;
   color: var(--main-text);
-  background: linear-gradient(315deg, rgba(25,195,251,1) 0%, rgba(29,113,242,1) 25%, rgba(25,195,251,1) 75%, rgba(29,113,242,1) 100%);
 }
 
 .app {
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;  
 }
 
 main {
@@ -27,6 +25,19 @@ main {
   margin: 0 auto;
   min-height: 100vh;
   padding: 25px 15px 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.app-background-color-night {
+  background: linear-gradient(315deg, rgba(131,58,180,1) 0%, rgb(99, 4, 53) 25%, rgb(58, 2, 95) 75%, rgba(58, 2, 95) 100%)
+}
+
+.app-background-color-cold {
+  background: linear-gradient(315deg, rgba(25,195,251,1) 0%, rgba(29,113,242,1) 25%, rgba(25,195,251,1) 75%, rgba(29,113,242,1) 100%);
+}
+
+.app-background-color-warm {
+  background: linear-gradient(315deg, rgb(234 110 74) 0%, rgba(255,205,0,1) 25%, rgb(234 110 74) 75%, rgba(255,205,0,1) 100%)
 }
 
 .nav-bar {
@@ -203,7 +214,7 @@ main {
 .info-weather {
   font-size: 40px;
   font-weight: 700;
-  color: #4DD0E1;
+  color: var(--main-text);
   text-shadow: 1px 1px rgba(0, 0, 0, 1);
 }
 

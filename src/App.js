@@ -5,6 +5,7 @@ import Location from './components/location';
 import WeatherDetails from './components/weather-details';
 import Forecast from './components/Forecast';
 import getFullWeatherData from './services/weather.service';
+import { localTime } from './services/weather.service';
 
 function App() {
 
@@ -25,8 +26,25 @@ function App() {
 
   }, [query, units])
 
+  const bg = () => {
+    if(!weather) return "app app-background-color-cold";
+
+    let set = parseInt(localTime(weather.sunset, weather.timezone, "HH"))
+    let rise = parseInt(localTime(weather.sunrise, weather.timezone, "HH"))
+    let current = parseInt(localTime(weather.dt, weather.timezone, "HH"))
+    
+    if( current > set || current < rise) return "app app-background-color-night"
+
+    const warm = units === "metric" ? 23 : 75;
+    if(weather.temp < warm) {
+     return "app app-background-color-cold"
+    } else {
+      return "app app-background-color-warm"
+    }
+  }
+
   return (
-    <div className="app">
+    <div className={bg()}>
       <main>
         <NavBar setQuery={setQuery} />
         <SearchBar setQuery={setQuery} units={units} setUnits={setUnits}/>
@@ -37,7 +55,6 @@ function App() {
             <Forecast title="Daily Forecast" items={weather.daily} />
           </div>
         )}
-
       </main>
     </div>
   );
