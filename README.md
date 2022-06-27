@@ -48,6 +48,9 @@ REACT_APP_WEATHER_KEY = 'THE_KEY'
 ```
 npm start
 ```
+## How the app works
+![App screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/img15.49.png)
+We can choose a city form the nav-bar, there are five preset cities.
 
 ## Author
   
