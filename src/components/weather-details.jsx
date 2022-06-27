@@ -43,7 +43,7 @@ function WeatherDetails({weather: {
                 </div>
                 <div className="info-flex">
                     <UilWind size={20} className="icon" />
-                    <p>Wind speed: {`${speed.toFixed()} km/h`}</p>
+                    <p>Wind speed: {`${speed.toFixed()} m/s`}</p>
                 </div>
             </div>
         </div>

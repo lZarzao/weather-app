@@ -7,7 +7,7 @@ function SearchBar({setQuery, units, setUnits}) {
 
   const handleSearchClick = (id) => {
     if (city !== "") setQuery({q: city})
-    changeSelector(id)
+    changeSelector(id, "selected")
   }
 
   const handleLocationClick = (id) => {
@@ -17,16 +17,24 @@ function SearchBar({setQuery, units, setUnits}) {
         let lon = position.coords.longitude
 
         setQuery({ lat, lon})
-        changeSelector(id)
+        changeSelector(id, "selected")
       })
     }
   }
 
-  const changeSelector = (id) => {
+  const handleUnitsCF = (e) => {
+    const selected = e.currentTarget.name
+    if(units !== selected) {
+      changeSelector(selected, "selected-unit")
+      setUnits(selected)
+    }
+  }
+
+  const changeSelector = (id, classname) => {
     let element = document.getElementById(id);
-    let belement = document.getElementsByClassName("selected")[0];
-    belement && belement.classList.remove("selected")
-    element.classList.add("selected")
+    let belement = document.getElementsByClassName(classname)[0];
+    belement && belement.classList.remove(classname)
+    element.classList.add(classname)
   }
 
     return (
@@ -35,9 +43,9 @@ function SearchBar({setQuery, units, setUnits}) {
           <UilSearch id="search-icon" size={24} className="search-icon" onClick={() => handleSearchClick("search-icon")}/>
           <UilLocationPoint id="point-icon" size={24} className="search-icon" onClick={() => handleLocationClick("point-icon")} />
           <div className="weather-unit">
-            <button id="celcius" name="celcius" className="selected-unit">°C</button>
+            <button id="metric" name="metric" className="selected-unit" onClick={handleUnitsCF}>°C</button>
             <p>|</p>
-            <button id="farenheit" name="farenheit">°F</button>
+            <button id="imperial" name="imperial" onClick={handleUnitsCF}>°F</button>
           </div>
     </div>
     )
