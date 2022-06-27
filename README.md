@@ -49,14 +49,17 @@ REACT_APP_WEATHER_KEY = 'THE_KEY'
 npm start
 ```
 ## How the app works
+
 ![App screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/img15.49.png)
 
 * We can choose a city form the nav-bar, there are five preset cities.
+
 ![nav-bar screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/navbar.png)
 
 * We can search for a city with the searchbar, by writing the name in the input and then clicking in the search icon.
 * The app can obtain the city where we are by clicking on the location icon
 * We can change the data between celsius and fahrenheit by clicking on the F | C buttons 
+
 ![search-bar screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/searchbar.png)
 
 ## What data do we get?
