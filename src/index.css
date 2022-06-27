@@ -64,6 +64,7 @@ main {
   height: 40px;
   margin: 0 0 24px;
   display: flex;
+  justify-content: space-between;
 }
 
 .search-box .search-bar {
@@ -98,14 +99,24 @@ main {
 }
 
 .search-icon {
-  width: 10%;
   height: 100%;
+  width: 50px;
+  padding: 0px 10px;
+  margin-left: 10px;
+
+  cursor: pointer;
+  
+  border-radius: 10px;
+}
+
+.search-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .weather-unit {
   display: flex;
   width: 30%;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .weather-unit button {
@@ -242,4 +253,16 @@ hr {
 .forecast-box img {
   max-width: 60px;
   object-fit: cover;
+}
+
+.selected {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.4s ease;
+  color: var(--main-search-text)
+}
+
+.weather-unit button.selected-unit{
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.4s ease;
+  color: var(--main-search-text)
 }

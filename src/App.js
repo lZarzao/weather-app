@@ -28,9 +28,8 @@ function App() {
   return (
     <div className="app">
       <main>
-        <NavBar />
-        <SearchBar />
-
+        <NavBar setQuery={setQuery} />
+        <SearchBar setQuery={setQuery} units={units} setUnits={setUnits}/>
         {weather && (
           <div>
             <Location weather={weather} />

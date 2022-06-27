@@ -1,6 +1,14 @@
 import React from "react";
 
-function NavBar() {
+function NavBar({setQuery}) {
+
+    const alerta = (id, name) => {
+        setQuery(name)
+        let element = document.getElementById(id);
+        let belement = document.getElementsByClassName("selected")[0];
+        belement && belement.classList.remove("selected")
+        element.classList.add("selected")
+    }
 
     const cities = [
         {
@@ -28,7 +36,7 @@ function NavBar() {
     return (
     <div className="nav-bar">
         {cities.map((city) => (
-            <button key={city.id} className="cities-button">{city.name}</button>
+            <button key={city.id} id={city.id} className="cities-button" onClick={() => alerta(city.id, {q: city.name })}>{city.name}</button>
         ))}
     </div>
     )

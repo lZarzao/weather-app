@@ -11,7 +11,7 @@ function Forecast( {title, items} ) {
         <hr />
         <div className="forecast-container">
             {items.map(item => (
-                <div className="forecast-box">
+                <div className="forecast-box" key={item.title}>
                     <p>{item.title}</p>
                     <img src={iconUrl(item.icon)} alt="weather img" />
                     <p>{`${item.temp.toFixed()}°`}</p>
