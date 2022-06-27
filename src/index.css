@@ -108,7 +108,7 @@ main {
 
 .search-box .search-bar::placeholder {
     text-transform: lowercase;
-    color: #000;
+    color: var(--main-search-text);
 }
 
 .search-icon {
@@ -373,5 +373,10 @@ hr {
   .info-container {
     margin-top: 20px;
     width: 100%;
+  }
+
+  .search-box .search-bar::placeholder {
+    text-transform: lowercase;
+    color: #000;
   }
 }
