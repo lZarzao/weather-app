@@ -18,7 +18,7 @@ function WeatherDetails({weather: {
                 <div className="info-box">
                     <div className="info-flex">
                         <UilArrowUp size={20} className="icon" />
-                        <p>Hight: {`${temp_max.toFixed()}°`}</p>
+                        <p>High: {`${temp_max.toFixed()}°`}</p>
                     </div>
                     <div className="info-flex">
                         <UilArrowDown size={20} className="icon" />
@@ -36,7 +36,7 @@ function WeatherDetails({weather: {
                 <div className="info-box">
                     <div className="info-flex">
                         <UilTemperature size={20} className="icon" />
-                        <p>Fells like: {`${feels_like.toFixed()}°`}</p>
+                        <p>Feels like: {`${feels_like.toFixed()}°`}</p>
                     </div>
                     <div className="info-flex">
                         <UilTear size={20} className="icon" />
