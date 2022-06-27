@@ -1,4 +1,6 @@
+/* eslint-disable camelcase */
 import React from "react";
+import PropTypes from 'prop-types';
 import { UilArrowUp, UilArrowDown, UilTemperature, UilTear, UilWind, UilSun, UilSunset } from '@iconscout/react-unicons';
 import { iconUrl, localTime } from "../services/weather.service";
 
@@ -52,5 +54,9 @@ function WeatherDetails({weather: {
     </div>
     )
 }
+
+WeatherDetails.propTypes = {
+  weather: PropTypes.instanceOf(Object).isRequired
+};
 
 export default WeatherDetails;

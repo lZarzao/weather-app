@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { DateTime } from "luxon"
 
 const api = {
@@ -5,9 +6,13 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5"
 }
 
+// using luxon to format the date/time of the api
+const localTime = (sec, zone, format = "cccc, dd LLLL yyyy' - Local time: 'hh:mm a") => 
+    DateTime.fromSeconds(sec).setZone(zone).toFormat(format)
+
 // call the api
 const getWeatherData = (type, searchParams) => {
-    const url = new URL(api.base + '/' + type)
+    const url = new URL(`${api.base  }/${type}`)
     url.search = new URLSearchParams({...searchParams, appid:api.key})
 
     return fetch(url)
@@ -31,16 +36,15 @@ const currentWeatherDataFormat = (data) => {
     return { lat, lon, temp, feels_like, temp_min, temp_max, humidity, name, dt, country, sunrise, sunset, speed, detail, icon}
 }
 
-//Format the response
+// Format the response
 const forecastWheaterDataFormat = (data) => {
-    let {timezone, daily} = data
-    daily = daily.slice(1,6).map(day => {
-        return {
+    let {daily} = data
+    const {timezone} = data
+    daily = daily.slice(1,6).map(day => ({
             title: localTime(day.dt, timezone, 'cccc'),
             temp: day.temp.day,
             icon: day.weather[0].icon
-        }
-    })
+        }))
 
     return {timezone, daily}
 }
@@ -61,10 +65,6 @@ const getFullWeatherData = async (searchParams) => {
 
 // url to get the api icon
 const iconUrl = (code) => `http://openweathermap.org/img/wn/${code}@4x.png`
-
-// using luxon to format the date/time of the api
-const localTime = (sec, zone, format = "cccc, dd LLLL yyyy' - Local time: 'hh:mm a") => 
-    DateTime.fromSeconds(sec).setZone(zone).toFormat(format)
 
 
 export default getFullWeatherData
