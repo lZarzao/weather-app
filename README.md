@@ -66,6 +66,7 @@ npm start
 * Weather and a representative image
 * the background changes depending on the temperature and time of day
 * A little forecast and more...
+
 ![App screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/info.png)
 
 ![App screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/forecast.png)
