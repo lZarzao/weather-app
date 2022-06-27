@@ -26,6 +26,7 @@ function App() {
 
   }, [query, units])
 
+  // Set the bg depending of the time and the tempeture
   const bg = () => {
     if(!weather) return "app app-background-color-cold";
 

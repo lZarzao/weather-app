@@ -5,11 +5,13 @@ function SearchBar({setQuery, units, setUnits}) {
 
   const [city, setCity] = useState("")
 
+  // set the query when you click the search-icon
   const handleSearchClick = (id) => {
     if (city !== "") setQuery({q: city})
     changeSelector(id, "selected")
   }
 
+  // set the query when you click de locationPoint-icon
   const handleLocationClick = (id) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -22,6 +24,7 @@ function SearchBar({setQuery, units, setUnits}) {
     }
   }
 
+  // set the units (metric|imperial) when you click the C/F buttons
   const handleUnitsCF = (e) => {
     const selected = e.currentTarget.name
     if(units !== selected) {
@@ -30,6 +33,7 @@ function SearchBar({setQuery, units, setUnits}) {
     }
   }
 
+  // change the selected class
   const changeSelector = (id, classname) => {
     let element = document.getElementById(id);
     let belement = document.getElementsByClassName(classname)[0];

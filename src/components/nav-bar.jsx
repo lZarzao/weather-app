@@ -9,6 +9,8 @@ function NavBar({setQuery}) {
         belement && belement.classList.remove("selected")
         element.classList.add("selected")
     }
+    
+    //preset cities
 
     const cities = [
         {

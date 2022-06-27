@@ -5,6 +5,7 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5"
 }
 
+// call the api
 const getWeatherData = (type, searchParams) => {
     const url = new URL(api.base + '/' + type)
     url.search = new URLSearchParams({...searchParams, appid:api.key})
@@ -13,6 +14,7 @@ const getWeatherData = (type, searchParams) => {
         .then(res => res.json())
 }
 
+// format the response
 const currentWeatherDataFormat = (data) => {
     const {
         coord: {lat, lon},
@@ -29,6 +31,7 @@ const currentWeatherDataFormat = (data) => {
     return { lat, lon, temp, feels_like, temp_min, temp_max, humidity, name, dt, country, sunrise, sunset, speed, detail, icon}
 }
 
+//Format the response
 const forecastWheaterDataFormat = (data) => {
     let {timezone, daily} = data
     daily = daily.slice(1,6).map(day => {
@@ -56,8 +59,10 @@ const getFullWeatherData = async (searchParams) => {
         return {...currentWeatherData, ...forecastWheaterData}
 }
 
+// url to get the api icon
 const iconUrl = (code) => `http://openweathermap.org/img/wn/${code}@4x.png`
 
+// using luxon to format the date/time of the api
 const localTime = (sec, zone, format = "cccc, dd LLLL yyyy' - Local time: 'hh:mm a") => 
     DateTime.fromSeconds(sec).setZone(zone).toFormat(format)
 
