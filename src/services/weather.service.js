@@ -1,7 +1,7 @@
 import { DateTime } from "luxon"
 
 const api = {
-  key: "2abd254968449e3f2aca30a513bc1f53",
+  key: process.env.REACT_APP_WEATHER_KEY,
   base: "https://api.openweathermap.org/data/2.5"
 }
 
