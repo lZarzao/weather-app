@@ -44,6 +44,7 @@ main {
   width: 100%;
   height: 40px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin: 0 auto 24px;
 }
@@ -163,6 +164,7 @@ main {
   font-size: 32px;
   font-weight: 400;
   display: flex;
+  align-items: center;
 }
 
 .location .location-icon {
@@ -214,6 +216,7 @@ main {
 .info-weather {
   font-size: 40px;
   font-weight: 700;
+  width: 33%;
   color: var(--main-text);
   text-shadow: 1px 1px rgba(0, 0, 0, 1);
 }
@@ -221,8 +224,16 @@ main {
 .info-box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 8px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  width: 66%;
 }
 
 .info-flex {
@@ -258,7 +269,8 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  
+  font-size: 16px;
 }
 
 .forecast-box img {
@@ -276,4 +288,89 @@ hr {
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.4s ease;
   color: var(--main-search-text)
+}
+
+@media (max-width: 580px) {
+  .nav-bar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto 24px;
+
+    overflow: scroll;
+  }
+
+  .cities-button {
+  width: 100%;
+  min-height: 40px;
+  }
+
+  .search-box {
+    height: 30px;
+  }
+
+  .weather-unit button {
+    font-size: 16px;
+  }
+
+  .weather-unit p {
+    font-size: 27px;
+  }
+
+  .search-box .search-bar {
+    font-size: 16px;
+  }
+
+  .location-info .date {
+    font-size: 14px;
+  }
+
+  .location-info .location {
+    font-size: 24px;
+  }
+
+  .weather-details {
+    margin: 20px 0px;
+  }
+
+  .weather-details .temp {
+    height: 100px;
+  }
+
+  .temp p {
+    font-size: 100px
+  }
+
+  .weather-details .info {
+    margin-top: 20px;
+  }
+
+  .info-weather {
+    font-size: 32px;
+  }
+
+  .info-flex p {
+    font-size: 12px;
+  }
+
+  .forecast-title {
+    font-size: 16px;
+  }
+
+  .forecast-box {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    flex-direction: column;
+  }
+
+  .info-container {
+    margin-top: 20px;
+    width: 100%;
+  }
 }
