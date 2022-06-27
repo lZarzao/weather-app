@@ -23,14 +23,14 @@ $ git clone https://github.com/lZarzao/weather-app
 ```
 
 * Go into the repository
-```
 
+```
 cd weather-app
 ```
 
 * Install dependencies
-```
 
+```
 npm install
 ```
 
