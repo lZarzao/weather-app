@@ -50,7 +50,28 @@ npm start
 ```
 ## How the app works
 ![App screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/img15.49.png)
-We can choose a city form the nav-bar, there are five preset cities.
+
+* We can choose a city form the nav-bar, there are five preset cities.
+![nav-bar screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/navbar.png)
+
+* We can search for a city with the searchbar, by writing the name in the input and then clicking in the search icon.
+* The app can obtain the city where we are by clicking on the location icon
+* We can change the data between celsius and fahrenheit by clicking on the F | C buttons 
+![search-bar screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/searchbar.png)
+
+## What data do we get?
+* Local date and time
+* City name and Country code
+* Tempeture
+* Weather and a representative image
+* the background changes depending on the temperature and time of day
+* A little forecast and more...
+![App screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/info.png)
+
+![App screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/forecast.png)
+
+## Responsive design
+![App screenshot](https://raw.githubusercontent.com/lZarzao/weather-app/master/src/assets/mobile.png)
 
 ## Author
   
