@@ -14,7 +14,11 @@ function Forecast({ title, items }) {
           <div className="forecast-box" key={item.title}>
             <p>{item.title}</p>
             <img src={iconUrl(item.icon)} alt="weather img" />
-            <p>{`${item.temp.toFixed()}°`}</p>
+            <div className="forecast-box-temp">
+              <p>{`${item.temp_min.toFixed()}°`}</p>
+              <p>|</p>
+              <p>{`${item.temp_max.toFixed()}°`}</p>
+            </div>
           </div>
         ))}
       </div>

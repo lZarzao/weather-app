@@ -297,6 +297,18 @@ hr {
   object-fit: cover;
 }
 
+.forecast-box-temp {
+  display: flex;
+}
+
+.forecast-box-temp p:first-child{
+  margin-right: 4px;
+}
+
+.forecast-box-temp p:last-child{
+  margin-left: 4px;
+}
+
 .selected {
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.4s ease;
