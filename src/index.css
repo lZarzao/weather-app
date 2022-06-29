@@ -2,12 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --main-warn: #FFFAE0;
-  --main-cold: #19C3FB;
+  --main-warn: #fffae0;
+  --main-cold: #19c3fb;
 
   --main-text: #fafafa;
   --main-search-text: #313131;
-  ;
 }
 
 body {
@@ -16,7 +15,7 @@ body {
 }
 
 .app {
-  width: 100vw;  
+  width: 100vw;
 }
 
 main {
@@ -29,15 +28,33 @@ main {
 }
 
 .app-background-color-night {
-  background: linear-gradient(315deg, rgba(131,58,180,1) 0%, rgb(99, 4, 53) 25%, rgb(58, 2, 95) 75%, rgba(58, 2, 95) 100%)
+  background: linear-gradient(
+    315deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgb(99, 4, 53) 25%,
+    rgb(58, 2, 95) 75%,
+    rgba(58, 2, 95) 100%
+  );
 }
 
 .app-background-color-cold {
-  background: linear-gradient(315deg, rgba(25,195,251,1) 0%, rgba(29,113,242,1) 25%, rgba(25,195,251,1) 75%, rgba(29,113,242,1) 100%);
+  background: linear-gradient(
+    315deg,
+    rgba(25, 195, 251, 1) 0%,
+    rgba(29, 113, 242, 1) 25%,
+    rgba(25, 195, 251, 1) 75%,
+    rgba(29, 113, 242, 1) 100%
+  );
 }
 
 .app-background-color-warm {
-  background: linear-gradient(315deg, rgb(234 110 74) 0%, rgba(255,205,0,1) 25%, rgb(234 110 74) 75%, rgba(255,205,0,1) 100%)
+  background: linear-gradient(
+    315deg,
+    rgb(234 110 74) 0%,
+    rgba(255, 205, 0, 1) 25%,
+    rgb(234 110 74) 75%,
+    rgba(255, 205, 0, 1) 100%
+  );
 }
 
 .nav-bar {
@@ -89,10 +106,10 @@ main {
   background: none;
   border: none;
   outline: none;
-  
+
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  
+
   box-shadow: 0px 5px rgba(0, 0, 0, 0.01);
 
   font-size: 20px;
@@ -107,8 +124,8 @@ main {
 }
 
 .search-box .search-bar::placeholder {
-    text-transform: lowercase;
-    color: var(--main-search-text);
+  text-transform: lowercase;
+  color: var(--main-search-text);
 }
 
 .search-icon {
@@ -118,7 +135,7 @@ main {
   margin-left: 10px;
 
   cursor: pointer;
-  
+
   border-radius: 10px;
 }
 
@@ -158,7 +175,6 @@ main {
   font-size: 37px;
   margin: 0px 8px;
 }
-
 
 .location-info .location {
   margin-top: 16px;
@@ -211,7 +227,7 @@ main {
   margin-top: 32px;
   padding: 20px;
   border-radius: 10px;
-  background: rgba(255,255,255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .info-weather {
@@ -243,6 +259,7 @@ main {
 
 .info-flex p {
   font-size: 16px;
+  font-weight: 300;
 }
 
 .info-flex .icon {
@@ -261,7 +278,7 @@ hr {
 .forecast-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   margin: 16px 0;
 }
 
@@ -270,8 +287,9 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   font-size: 16px;
+  font-weight: 300;
 }
 
 .forecast-box img {
@@ -282,13 +300,13 @@ hr {
 .selected {
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.4s ease;
-  color: var(--main-search-text)
+  color: var(--main-search-text);
 }
 
-.weather-unit button.selected-unit{
+.weather-unit button.selected-unit {
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.4s ease;
-  color: var(--main-search-text)
+  color: var(--main-search-text);
 }
 
 @media (max-width: 580px) {
@@ -304,8 +322,8 @@ hr {
   }
 
   .cities-button {
-  width: 100%;
-  min-height: 40px;
+    width: 100%;
+    min-height: 40px;
   }
 
   .search-box {
@@ -341,7 +359,7 @@ hr {
   }
 
   .temp p {
-    font-size: 100px
+    font-size: 100px;
   }
 
   .weather-details .info {
