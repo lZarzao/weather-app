@@ -84,6 +84,10 @@ npm start
 
 https://weather-app-lzarzao.vercel.app/
 
+## Updates
+
+* esLint config
+
 ## Author
 
 <p>Made by <a href="https://www.linkedin.com/in/luis-zarzao/">Luis Zarza</a></p>
