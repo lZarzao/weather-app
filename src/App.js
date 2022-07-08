@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import NavBar from './components/nav-bar';
-import SearchBar from './components/search-bar';
-import Location from './components/location';
-import WeatherDetails from './components/weather-details';
+import NavBar from './components/Nav-bar';
+import SearchBar from './components/Search-bar';
+import Location from './components/Location';
+import WeatherDetails from './components/Weather-details';
 import Forecast from './components/Forecast';
 import getFullWeatherData, { localTime } from './services/weather.service';
 
