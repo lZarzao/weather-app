@@ -43,7 +43,7 @@ function SearchBar({ setQuery, units, setUnits }) {
   };
 
   return (
-    <div className="search-box">
+    <form className="search-box">
       <input
         value={city}
         onChange={(e) => setCity(e.currentTarget.value)}
@@ -64,7 +64,7 @@ function SearchBar({ setQuery, units, setUnits }) {
         className="search-icon"
         onClick={() => handleLocationClick('point-icon')}
       />
-      <div className="weather-unit">
+      <aside className="weather-unit">
         <button
           id="metric"
           type="button"
@@ -83,8 +83,8 @@ function SearchBar({ setQuery, units, setUnits }) {
         >
           °F
         </button>
-      </div>
-    </div>
+      </aside>
+    </form>
   );
 }
 

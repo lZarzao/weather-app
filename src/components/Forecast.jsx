@@ -4,12 +4,12 @@ import { iconUrl } from '../services/weather.service';
 
 function Forecast({ title, items }) {
   return (
-    <div className="forecast">
-      <div className="forecast-title">
+    <ul className="forecast">
+      <li className="forecast-title">
         <p>{title}</p>
-      </div>
+      </li>
       <hr />
-      <div className="forecast-container">
+      <li className="forecast-container">
         {items.map((item) => (
           <div className="forecast-box" key={item.title}>
             <p>{item.title}</p>
@@ -21,8 +21,8 @@ function Forecast({ title, items }) {
             </div>
           </div>
         ))}
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 }
 

@@ -37,7 +37,7 @@ function NavBar({ setQuery }) {
   ];
 
   return (
-    <div className="nav-bar">
+    <nav className="nav-bar">
       {cities.map((city) => (
         <button
           key={city.id}
@@ -49,7 +49,7 @@ function NavBar({ setQuery }) {
           {city.name}
         </button>
       ))}
-    </div>
+    </nav>
   );
 }
 
