@@ -4,14 +4,14 @@ import { iconUrl } from '../services/weather.service';
 
 function Forecast({ title, items }) {
   return (
-    <ul className="forecast">
-      <li className="forecast-title">
+    <section className="forecast">
+      <header className="forecast-title">
         <p>{title}</p>
-      </li>
+      </header>
       <hr />
-      <li className="forecast-container">
+      <ul className="forecast-container">
         {items.map((item) => (
-          <div className="forecast-box" key={item.title}>
+          <li className="forecast-box" key={item.title}>
             <p>{item.title}</p>
             <img src={iconUrl(item.icon)} alt="weather img" />
             <div className="forecast-box-temp">
@@ -19,10 +19,10 @@ function Forecast({ title, items }) {
               <p>|</p>
               <p>{`${item.temp_max.toFixed()}°`}</p>
             </div>
-          </div>
+          </li>
         ))}
-      </li>
-    </ul>
+      </ul>
+    </section>
   );
 }
 

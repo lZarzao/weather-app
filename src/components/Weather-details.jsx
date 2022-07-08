@@ -30,7 +30,7 @@ function WeatherDetails({
 }) {
 
     return (
-      <article className="weather-details">
+      <section className="weather-details">
         <header className="temp">
           <p>{`${temp.toFixed()}°`}</p>
           <img src={iconUrl(icon)} alt="weather img" />
@@ -75,7 +75,7 @@ function WeatherDetails({
             </ul>
           </div>
         </section>
-      </article>
+      </section>
     );
 }
 

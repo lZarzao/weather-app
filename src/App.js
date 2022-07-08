@@ -48,11 +48,11 @@ function App() {
         <NavBar setQuery={setQuery} />
         <SearchBar setQuery={setQuery} units={units} setUnits={setUnits} />
         {weather && (
-          <section>
+          <article>
             <Location weather={weather} />
-            <WeatherDetails weather={weather} units={units}/>
+            <WeatherDetails weather={weather} units={units} />
             <Forecast title="Daily Forecast" items={weather.daily} />
-          </section>
+          </article>
         )}
       </main>
     </div>
